@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #e74141;
+  --accent: #ff6f61;
+  --text-1: #d1d1d1;
+  --text-2: #777777;
+  --box-0: #000000;
+  --box-1: #1a1a1a;
+  --box-2: #2a2a2a;
+  --box-3: #3a3a3a;
+  --box-5: #505050;
+  --font: "Inconsolata", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--box-0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font);
+  color: var(--text-1);
+  padding: 0;
+  margin: 0;
+}
+
+body,
+#app {
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+a {
+  color: var(--text-1);
+  text-decoration: none;
+}
+
+p {
+  font-size: 0.8rem;
+  color: var(--text-2);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+main,
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 35px;
+  border: 1px solid var(--box-5);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 950px;
+}
+
+main {
+  min-height: 600px;
+  gap: 30px;
+}
+
+header {
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 12px;
+  margin: 0;
+  gap: 20px;
+}
+header .logo {
+  width: 130px;
+}
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header ul li a {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.release {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--box-2);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  max-width: 160px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow: hidden;
+  padding: 0;
+}
+.release_art {
+  display: flex;
+  border-bottom: 1px solid var(--box-2);
+  border-radius: 8px;
+  height: 160px;
+  width: 160px;
+}
+.release_art img {
+  width: 100%;
+  height: 100%;
+}
+.release_meta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+.release_info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.release_info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--color-1);
+}
+.release_info p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#releases-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 160px);
+  gap: 20px;
+}
+
+.wrapper {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--box-3);
+  margin: 20px 0;
+}
+
+.locked {
+  color: var(--text-2);
+  font-weight: normal;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
