@@ -4,7 +4,10 @@
       <img :src="art || defaultArt" :alt="`${title} Album Art`" />
     </div>
     <div class="release_info">
-      <h3 id="release_title">{{ title }}</h3>
+      <router-link :to="`/release/woidzero/${title.toLowerCase().replace(/\s+/g, '-')}`">
+        <h3 id="release_title">{{ title }}</h3>
+      </router-link>
+
       <div class="release_meta">
         <span id="release_artist">{{ artist }}</span>
         &bull;
@@ -18,7 +21,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import defaultArt from "../../public/placeholder.png"
+import defaultArt from "../../public/placeholder.jpg"
 
 defineProps({
   title: {

@@ -16,7 +16,6 @@
         artist="Maruja"
         :year="2025"
         format="EP"
-        art="/public/placeholder.png"
       />
     </div>
   </section>

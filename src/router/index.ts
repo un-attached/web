@@ -15,9 +15,14 @@ const router = createRouter({
       component: () => import('../views/ReleasesView.vue'),
     },
     {
-      path: '/album',
-      name: 'album',
-      component: () => import('../views/ReleasesView.vue'),
+      path: '/release/woidzero/mind-furnace',
+      name: 'release',
+      component: () => import('../views/ReleaseView.vue'),
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('../views/ProfileView.vue'),
     },
   ],
 })
